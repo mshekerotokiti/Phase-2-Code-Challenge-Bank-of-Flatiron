@@ -29,5 +29,5 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 ## License
 
-This project was coded by Mshekerotokiti
+This project was coded by Copyright (c) 2023 [Sharon Tokiti](https://github.com/mshekerotokiti)
 
