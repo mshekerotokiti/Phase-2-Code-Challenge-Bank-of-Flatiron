@@ -27,7 +27,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Licsense
+## License
 
 This project was coded by Mshekerotokiti
 
