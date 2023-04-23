@@ -1,22 +1,18 @@
-import TransactionItems from "./TransactionItems";
-function Transactions(transactions){
+import React from 'react';
+
+function Transactions({transactions, search}){
     return(
-        <table>
-            <tr>
-                <th>Date</th>
-                <th>Description</th>
-                <th>Category</th>
-                <th>Amount</th>
-            </tr>
-              {transactions.map(trans => {
-                return <TransactionItems
-                date= {trans.date}
-                description= {trans.description}
-                category={trans.category}
-                amount= {trans.amount}
-                key={trans.id} />
-              })}
-        </table>
-    )
+      <>
+        {transactions.map((trans)=> 
+      <tr> key={trans.id}
+        <td>{trans.Date} </td>
+        <td>{trans.Description}</td>
+        <td>{trans.Category}</td>
+        <td>{trans.Amount}</td>
+       </tr>
+        )}
+        
+       </>
+    );
 }
 export default Transactions;
