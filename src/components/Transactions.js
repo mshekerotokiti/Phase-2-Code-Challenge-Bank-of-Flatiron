@@ -3,14 +3,20 @@ import React from 'react';
 function Transactions({transactions, search}){
     return(
       <>
-        {transactions.map((trans)=> 
+     
+        {transactions
+        //filter description details on the search bar
+        // .filter((trans) => trans.description.toLowerCase().includes(search.toLowerCase()))
+
+        //display data in the table
+        .map((trans)=> 
       <tr> key={trans.id}
-        <td>{trans.Date} </td>
-        <td>{trans.Description}</td>
-        <td>{trans.Category}</td>
-        <td>{trans.Amount}</td>
+        <td>{trans.date} </td>
+        <td>{trans.description}</td>
+        <td>{trans.category}</td>
+        <td>{trans.amount}</td>
        </tr>
-        )}
+          )}
         
        </>
     );

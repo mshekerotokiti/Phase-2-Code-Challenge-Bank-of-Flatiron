@@ -6,10 +6,10 @@ import TransactionItems from './components/Transactions';
 function App() {
   const [transactions, setTransactions] = useState([])
   useEffect(() => {
-    fetch("http://localhost:8001/transactions")
+    fetch("http://localhost:8000/transactions")
     .then((resp) => resp.json())
     .then(trans => setTransactions(trans))
-  })
+  }, [])
 
   return (
     <div className="App">
