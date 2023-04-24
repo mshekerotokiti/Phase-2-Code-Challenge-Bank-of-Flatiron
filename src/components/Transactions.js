@@ -1,26 +1,33 @@
 import React from 'react';
+import TransactionItems from './TransactionItems';
 
-function Transactions({transactions, search}){
+function Transactions({transactions}){
     return(
-      <>
-     
-        {transactions
-         //filter description details on the search bar
-        .filter((transaction) =>
-        transaction.description.toLowerCase().includes(search.toLowerCase())
+       <table>
+         <thead>
+             <tr>
+                <th>DATE</th>
+                <th>CATEGORY</th>
+                <th>DESCRIPTION</th>
+                <th>AMOUNT</th>
+             </tr>
+         </thead>
+         <tbody>
+             {transactions.map((transaction, index) => {
 
-        )
-        //display data in the table
-        .map((trans)=> 
-      <tr key= {trans.id}>
-        <td>{trans.date} </td>
-        <td>{trans.description}</td>
-        <td>{trans.category}</td>
-        <td>{trans.amount}</td>
-       </tr>
-          )}
-        
-       </>
-    );
+             return <TransactionItems
+                  index={index}
+                  id = {transaction.id}
+                  date={transaction.date}
+                  category={transaction.category}
+                  description={transaction.description}
+                  amount={transaction.amount}
+                  key={transaction.id}
+                />
+         })}
+        </tbody>
+       </table>
+       
+    )
 }
 export default Transactions;

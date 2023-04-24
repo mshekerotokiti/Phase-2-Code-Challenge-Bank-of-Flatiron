@@ -1,20 +1,16 @@
 import React from "react";
-import Transactions from "./Transactions";
 
-function TransactionItems({transactions, search}){
+function TransactionItems({index, category, date, description, amount, id}){
+  const isEven = index % 2 === 0
     return(
       <table className="ui celled striped padded table">
-        <tbody>
-         <tr>
-           <th className="ui center aligned header">Date</th>
-           <th className="ui center aligned header">Description</th>
-           <th className="ui center aligned header">Category</th>
-           <th className="ui center aligned header">Amount </th>
-         </tr>
-
-         {/*Transactions  component here*/}
-         <Transactions search={search} transactions= {transactions}/>
-        </tbody>
+        <tr className={isEven ? "even" : ""}>
+            <td>{date}</td>
+            <td>{category}</td>
+            <td>{description}</td>
+            <td className="amount-td">{amount}
+            </td>
+        </tr>
       </table> 
     );
 }
