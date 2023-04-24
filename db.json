@@ -99,39 +99,11 @@
       "id": 14
     },
     {
-      "date": "",
-      "description": "",
-      "category": "",
-      "amount": 0,
+      "date": "2023-04-03",
+      "description": "money",
+      "category": "housing",
+      "amount": "500",
       "id": 15
-    },
-    {
-      "date": "",
-      "description": "",
-      "category": "",
-      "amount": 0,
-      "id": 16
-    },
-    {
-      "date": "",
-      "description": "",
-      "category": "",
-      "amount": 0,
-      "id": 17
-    },
-    {
-      "date": "",
-      "description": "",
-      "category": "",
-      "amount": 0,
-      "id": 18
-    },
-    {
-      "date": "",
-      "description": "",
-      "category": "",
-      "amount": 0,
-      "id": 19
     }
   ]
 }
