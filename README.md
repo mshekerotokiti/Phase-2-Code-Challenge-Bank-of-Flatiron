@@ -37,6 +37,12 @@ You may also see any lint errors in the console.
 The component Hierarchy is:
 App ├──AccountContainer ├── AddTansactionForm └── Search └── TransactionList ├── Transactions
 
+Displayed the data to the Transactions component by passing props through AccountContainer => TransactionList => Transaction Mapped the data{key, date, category, description, amount} to the table using .map() method completing the first deliverable
+
+Added functionality to the form, added onChange event to track {date, category, description, amount} values after each key stroke, added a post method to add our data to backend server completing the second deliverable
+
+Added onChange event to track values after each keystroke for our search functionality on the Search component. Passed search state variables as props to the Transaction component through AccountContainer => TransactionList => Transaction, filtered the values from the category and description fields
+
 
 ## License
 
