@@ -1,22 +1,16 @@
 import React from 'react';
-import { useEffect , useState} from 'react';
 import './App.css';
-import TransactionItems from './components/Transactions';
+import AccountContainer from './components/AccountContainer';
+
 
 function App() {
-  const [transactions, setTransactions] = useState([])
-  useEffect(() => {
-    fetch("http://localhost:8000/transactions")
-    .then((resp) => resp.json())
-    .then(trans => setTransactions(trans))
-  }, [])
 
   return (
-    <div className="App">
-      <div className="App-header">
+    <div className="ui raised segment">
+      <div className="ui segment violet inverted">
        <h1>The Royal Bank of Flatiron</h1>
       </div>
-      <TransactionItems transactions={transactions} />
+      <AccountContainer />
     </div>
   );
 }

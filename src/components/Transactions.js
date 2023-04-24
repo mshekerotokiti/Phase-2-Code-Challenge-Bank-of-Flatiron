@@ -5,12 +5,14 @@ function Transactions({transactions, search}){
       <>
      
         {transactions
-        //filter description details on the search bar
-        // .filter((trans) => trans.description.toLowerCase().includes(search.toLowerCase()))
+         //filter description details on the search bar
+        .filter((transaction) =>
+        transaction.description.toLowerCase().includes(search.toLowerCase())
 
+        )
         //display data in the table
         .map((trans)=> 
-      <tr> key={trans.id}
+      <tr key= {trans.id}>
         <td>{trans.date} </td>
         <td>{trans.description}</td>
         <td>{trans.category}</td>
